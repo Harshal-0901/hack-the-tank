@@ -21,6 +21,7 @@ import FeaturedRow from "../components/featuredRow";
 
 /* import QuickFood from "../components/QuickFood"; */
 import Carousel from "../components/Carousel";
+import Footer from "../components/footer";
 
 const HomeScreen = () => {
   return (
@@ -115,6 +116,8 @@ const HomeScreen = () => {
         <Feature />
         {/* Tasty Discount */}
         <Discount />
+
+        {/* <Footer /> */}
 
         {/* Featured
         <View className="mt-5">
