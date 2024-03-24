@@ -16,6 +16,7 @@ import CommunityScreen from "./screens/CommunityScreen";
 import ConnectScreen from "./screens/ConnectScreen";
 import RestrictedBudget from "./screens/RestrictedBudget";
 import PriceModal from "./components/Modal/PriceModal";
+import Signin from "./screens/Signin";
 
 import { store } from "./store";
 import { Provider } from "react-redux";
@@ -69,6 +70,11 @@ export default function App() {
     <NavigationContainer>
       <Provider store={store}>
         <Stack.Navigator>
+          <Stack.Screen
+            name="Signin"
+            component={Signin}
+            options={{ headerShown: false }}
+          />
           <Stack.Screen
             name="Modal"
             component={ModalScreen}
