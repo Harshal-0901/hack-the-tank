@@ -13,7 +13,9 @@ import BasketScreen from "./screens/BasketScreen";
 import OrderPlacingScreen from "./screens/OrderPlacingScreen";
 import DeliveryScreen from "./screens/DeliveryScreen";
 import CommunityScreen from "./screens/CommunityScreen";
+import ConnectScreen from "./screens/ConnectScreen";
 import RestrictedBudget from "./screens/RestrictedBudget";
+import PriceModal from "./components/Modal/PriceModal";
 
 import { store } from "./store";
 import { Provider } from "react-redux";
@@ -45,6 +47,18 @@ function MyTab() {
             },
           }}
         />
+        <Tab.Screen
+          name="Connect"
+          component={ConnectScreen}
+          options={{
+            headerShown: false,
+            tabBarIcon: () => {
+              return (
+                <MaterialIcons name="contact-page" size={24} color="black" />
+              );
+            },
+          }}
+        />
       </Tab.Navigator>
     </Provider>
   );
@@ -61,6 +75,11 @@ export default function App() {
             options={{ headerShown: false }}
           />
           <Stack.Screen
+            name="PriceModal"
+            component={PriceModal}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
             name="MyTab"
             component={MyTab}
             options={{ headerShown: false }}
@@ -68,6 +87,31 @@ export default function App() {
           <Stack.Screen
             name="RestrictedBudget"
             component={RestrictedBudget}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Home"
+            component={HomeScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Restaurant"
+            component={RestaurantScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Basket"
+            component={BasketScreen}
+            options={{ presentation: "modal", headerShown: false }}
+          />
+          <Stack.Screen
+            name="OrderPlacing"
+            component={OrderPlacingScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Delivery"
+            component={DeliveryScreen}
             options={{ headerShown: false }}
           />
         </Stack.Navigator>

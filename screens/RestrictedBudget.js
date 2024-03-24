@@ -4,8 +4,11 @@ import FeatureCard from "../components/Home/FeatureCard";
 import { data } from "../data/Data";
 import Icon from "react-native-vector-icons/Ionicons";
 import { ScrollView } from "react-native";
+import ItemDynamic from "../components/Home/ItemDynamic";
 
-const RestrictedBudget = () => {
+const RestrictedBudget = ({ route, navigation }) => {
+  const { budget } = route.params;
+
   return (
     <View className="mt-3">
       <View className="px-3 pt-3 pb-2">
@@ -31,7 +34,7 @@ const RestrictedBudget = () => {
               }}
             >
               <View style={{ marginBottom: 40, width: 350 }}>
-                <FeatureCard
+                <ItemDynamic
                   key={offer.id}
                   id={offer.id}
                   img={offer.image}
@@ -40,6 +43,7 @@ const RestrictedBudget = () => {
                   price={offer.price}
                   location={offer.location}
                   des={offer.desc}
+                  budget={budget}
                 />
               </View>
             </View>

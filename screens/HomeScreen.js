@@ -22,6 +22,7 @@ import FeaturedRow from "../components/featuredRow";
 /* import QuickFood from "../components/QuickFood"; */
 import Carousel from "../components/Carousel";
 import Footer from "../components/footer";
+import ContactSection from "../components/ContactSection";
 
 const HomeScreen = () => {
   return (
@@ -100,6 +101,9 @@ const HomeScreen = () => {
         {/* Categories
         <Categories /> */}
 
+        <Text className="font-bold text-lg text-gray-800 ml-3 mt-2">
+          Categories
+        </Text>
         {/* categories */}
         <Category />
 
@@ -114,10 +118,9 @@ const HomeScreen = () => {
 
         {/* Feature */}
         <Feature />
+
         {/* Tasty Discount */}
         <Discount />
-
-        {/* <Footer /> */}
 
         {/* Featured
         <View className="mt-5">
